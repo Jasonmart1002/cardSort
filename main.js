@@ -1,5 +1,4 @@
 // Random cards
-
 function dealCards(){
 
     // Get input value
@@ -16,35 +15,51 @@ function dealCards(){
         const suits = ['&#9824;', '	&#9827;', '&#9829;', '&#9830;']
         let cardSuit = suits[Math.floor(Math.random() * suits.length)]
 
+        //Card
         let card = `<div class="card">
                     <div class="card-body">
                         ${cardValue} ${cardSuit} ${cardValue}
                     </div>
                     </div>`;
- 
+        
+        //Display the card
         document.querySelector('#cardDisplay').innerHTML +=  card;
+
     }
+
+    //Disables button
     document.getElementById("disable0").disabled = true;
+
 }
 
 
-
+//Sorting function
 function sortCards() {
-//Bubblesort
-const bubbleSort = (arr) => {
-    let wall = arr.length - 1; 
-    while (wall > 0){
-        let index = 0;
-        while (index < wall) {
-          if (arr[index] > arr[index + 1]) { 
-            let aux = arr[index]; 
-            arr[index] = arr[index + 1];
-            arr[index + 1] = aux;
-          }
-          index++;
+
+    //Bubblesort
+    const bubbleSort = (arr) => {
+
+        //Declare first wall
+        let wall = arr.length - 1;
+     
+        while (wall > 0){
+            let index = 0;
+            while (index < wall) {
+            if (arr[index] > arr[index + 1]) { 
+                let aux = arr[index]; 
+                arr[index] = arr[index + 1];
+                arr[index + 1] = aux;
+            }
+            
+            //Add index
+            index++;
+            }
+
+            //Subtract wall
+            wall--; 
         }
-        wall--; 
-    }
-    return arr;
-};
+
+        //Return outcome
+        return arr;
+    };
 }   
