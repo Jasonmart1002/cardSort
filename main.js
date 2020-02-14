@@ -7,6 +7,9 @@ let bubbleArray = [] //new array
 
 function dealCards() {
 
+    // Clear display
+    document.querySelector('#cardDisplay').innerHTML = "";
+
     // Get input value
     let userSelection = +document.querySelector('#input').value
 
@@ -27,15 +30,17 @@ function dealCards() {
         let cardSuit = suits[Math.floor(Math.random() * suits.length)]
     
 
+        //Card
         let card = `<div class="card">
                     <div class="card-body">
                         ${cardValue} ${cardSuit} ${cardValue}
                     </div>
                     </div>`;
- 
+        
+        //Display the card
         document.querySelector('#cardDisplay').innerHTML +=  card;
+
     }
-    document.getElementById("disable0").disabled = true;
 }
 
 
