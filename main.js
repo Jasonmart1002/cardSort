@@ -1,6 +1,9 @@
 // Random cards
 function dealCards(){
 
+    // Clear display
+    document.querySelector('#cardDisplay').innerHTML = "";
+
     // Get input value
     let userSelection = +document.querySelector('#input').value
 
@@ -26,10 +29,6 @@ function dealCards(){
         document.querySelector('#cardDisplay').innerHTML +=  card;
 
     }
-
-    //Disables button
-    document.getElementById("disable0").disabled = true;
-
 }
 
 
