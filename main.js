@@ -51,14 +51,16 @@ function dealCards(){
     document.getElementById("disable").disabled = true;
 }
 
+
+
+
+function sortCards() {
 //Bubblesort
 const bubbleSort = (arr) => {
-    //we start the wall at the end of the array
     let wall = arr.length - 1; 
     while (wall > 0){
         let index = 0;
         while (index < wall) {
-          //compare the adjacent positions, if the right one is bigger, we have to swap
           if (arr[index] > arr[index + 1]) { 
             let aux = arr[index]; 
             arr[index] = arr[index + 1];
@@ -66,8 +68,8 @@ const bubbleSort = (arr) => {
           }
           index++;
         }
-        //decrease the wall for optimization
         wall--; 
     }
     return arr;
 };
+}   
