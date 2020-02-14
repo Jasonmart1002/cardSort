@@ -28,8 +28,9 @@ function dealCards(){
 }
 
 
-
+// Dealcards
 function dealCards(){
+
     // Get input value
     let userSelection = +document.querySelector('#input').value
     // Get the random cards
