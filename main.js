@@ -1,11 +1,12 @@
 // Random cards
 
-
 let bubbleArray = [] //new array
 
 
 
 function dealCards() {
+        
+    bubbleArray = []
 
     // Clear display
     document.querySelector('#cardDisplay').innerHTML = "";
@@ -14,7 +15,7 @@ function dealCards() {
     let userSelection = +document.querySelector('#input').value
 
    
-       
+     
     // Get the random cards
     for ( i = 0; i < userSelection; i++){
 
@@ -35,7 +36,7 @@ function dealCards() {
                     <div class="card-body">
                         ${cardValue} ${cardSuit} ${cardValue}
                     </div>
-                    </div>`;
+                    </div><br />`;
         
         //Display the card
         document.querySelector('#cardDisplay').innerHTML +=  card;
@@ -65,8 +66,19 @@ const sortCards = () => {
     
 
     console.log("2",bubbleArray)
-    document.querySelector('#cardSorter').innerHTML += bubbleArray
+    document.querySelector('#cardSorter').innerHTML = bubbleArray
 
     return bubbleArray;
+
+
+    // let  = `<div class="card">
+    //                 <div class="card-body">
+    //                     ${cardValue} ${cardSuit} ${cardValue}
+    //                 </div>
+    //                 </div>`;
+
+
+
+
 };   
 
