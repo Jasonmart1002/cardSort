@@ -61,24 +61,16 @@ const sortCards = () => {
           }
           index++;
         }
-        wall--; 
+        wall--;
     }
-    
-
-    console.log("2",bubbleArray)
-    document.querySelector('#cardSorter').innerHTML = bubbleArray
+    document.querySelector('#cardSorter').innerHTML = 
+                    `<div class="card">
+                     <div class="card-body">
+                         ${bubbleArray}
+                     </div>
+                     </div>`;
 
     return bubbleArray;
-
-
-    // let  = `<div class="card">
-    //                 <div class="card-body">
-    //                     ${cardValue} ${cardSuit} ${cardValue}
-    //                 </div>
-    //                 </div>`;
-
-
-
 
 };   
 
