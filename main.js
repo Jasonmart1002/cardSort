@@ -4,7 +4,7 @@
 let bubbleArray = [] //new array
 
 
-
+//Deal cards
 function dealCards() {
 
     // Clear display
@@ -65,7 +65,12 @@ const sortCards = () => {
     
 
     console.log("2",bubbleArray)
-    document.querySelector('#cardSorter').innerHTML += bubbleArray
+    document.querySelector('#cardSorter').innerHTML = 
+                    `<div class="card">
+                    <div class="card-body">
+                        ${bubbleArray}
+                    </div>
+                    </div>`;
 
     return bubbleArray;
 };   
